@@ -1,4 +1,4 @@
-# odm-embedded-jse-exec
+# IBM ODM Embedded Java standard execution
 ## Executing business rules in a standalone Java app with ODM
 
 This project shows how to execute rules packaged in a ruleapp archive in a standalone Java standard application.
