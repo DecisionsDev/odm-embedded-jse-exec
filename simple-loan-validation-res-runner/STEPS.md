@@ -7,6 +7,8 @@ At the end of this step you have written a ruleapp archive in your file system
 
 ## Step 2 - Create a Java application to execute the decision service
 ### Step 2.1 - Write a decision service runner
+
 ### Step 2.2 - Package the ruleapp archive in the Java application jar
-### Step 2.3 - Compile
-### Step 2.4 - Run
+### Step 2.3 - Package the ODM execution jars
+### Step 2.4 - Compile
+### Step 2.5 - Run
