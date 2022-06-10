@@ -13,7 +13,7 @@ git clone
 ```
 Open an terminal where your have cloned this repository.
 ```console
-cd decisions-on-spark/simple-loan-validation-runner
+cd odm-embedded-jse-exec/simple-loan-validation-runner
 ```
 ## Build
 For ODM 8.10.X releases
@@ -26,6 +26,11 @@ mvn clean install -f pom-8.9.xml -Dodm.install=<INSTALLDIR>
 ```
 INSTALLDIR is the ODM 892 or upper version installation directory.
 VERSION is the version of ODM by example 8.10.3.0. This number has to match with the jar names.
+By example 
+```console
+mvn clean install -Dodm.install=/Users/johndoe/IBM/ODM8105 -Dodm.version=8.10.5.0
+```
+
 
 ## Run
 
