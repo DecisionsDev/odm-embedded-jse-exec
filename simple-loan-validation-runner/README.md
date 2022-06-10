@@ -13,7 +13,7 @@ git clone
 ```
 Open an terminal where your have cloned this repository.
 ```console
-cd odm-embedded-jse-exec/simple-loan-validation-runner
+cd odm-embedded-jse-exec/simple-loan-validation-res-runner
 ```
 ## Build
 For ODM 8.11.X and 8.10.X releases
@@ -36,10 +36,10 @@ mvn clean install -Dodm.install=/Users/johndoe/IBM/ODM8105 -Dodm.version=8.10.5.
 
 Automate loan validation on a CSV applications dataset to produce a CSV decision set.
 ```console
-java -cp target/simpleloanvalidationrunner-1.0-SNAPSHOT-withODM.jar com.ibm.decisions.spark.loanvalidation.LoanValidationRunner --input ../data/loanvalidation/1K/loanvalidation-requests-1K.csv --output ../data/loanvalidation/1K/loanvalidation-decisions-1K.csv
+java -cp target/simpleloanvalidationresrunner-1.0-SNAPSHOT.jar com.ibm.decisions.loanvalidation.LoanValidationRESRunner --input ../data/loanvalidation/1K/loanvalidation-requests-1K.csv --output ../data/loanvalidation/1K/loanvalidation-decisions-1K.csv
 ```
 
 Automate loan validation on a JSON applications dataset to produce a JSON decision set.
 ```console
-java -cp target/simpleloanvalidationrunner-1.0-SNAPSHOT-withODM.jar com.ibm.decisions.spark.loanvalidation.LoanValidationRunner --input ../data/loanvalidation/1K/loanvalidation-requests-1K.json --output ../data/loanvalidation/1K/loanvalidation-decisions-1K.json --master local[8]
+java -cp target/simpleloanvalidationrunner-1.0-SNAPSHOT-withODM.jar com.ibm.decisions.loanvalidation.LoanValidationRESRunner --input ../data/loanvalidation/1K/loanvalidation-requests-1K.json --output ../data/loanvalidation/1K/loanvalidation-decisions-1K.json --master local[8]
 ```
