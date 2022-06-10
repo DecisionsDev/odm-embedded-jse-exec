@@ -11,7 +11,7 @@ This API allows to set the persistence though 2 ways:
 - a ra.xml descriptor file detected in the classpath, 
 - or Java API. 
 
-The code shows the solution based on the [ra.xml](src/main/resources/ra.xml) descriptor.
+The code shows the solution based on the Java api to set a memory persistence. With this memory persistence configuration the ruleapp asked for execution is searched in the classpath once and kept in memory for all executions. 
 
 ## Pre requisites
 You need an IBM ODM 892 or higher installation to build the application. Root of your ODM installation is referred as <INSTALLDIR> in the instructions below. Maven files will look for the ODM jars under <INSTALLDIR>/executionserver/libs directory.
