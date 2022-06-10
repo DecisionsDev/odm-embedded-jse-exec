@@ -1,4 +1,4 @@
-# Simple loan validation in an embedded Java application
+# A simple loan validation in an embedded Java application
 This folder contains the source code to execute the ODM loan validation sample in an embedded Java application.
 
 The ruleapp archive is packaged within the calling Java application. This pattern offers maximum performance as the rules are fully compiled into bytecode thanks to the Decision Engine compilation, loaded only once in memory, and executed with a local Java api. All material is packaged in a standalone Java application without any external dependency.
