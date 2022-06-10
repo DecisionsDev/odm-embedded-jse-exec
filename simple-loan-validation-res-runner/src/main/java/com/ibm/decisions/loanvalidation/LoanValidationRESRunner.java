@@ -39,14 +39,6 @@ public class LoanValidationRESRunner {
 
 	private static IlrJ2SESessionFactory ruleSessionFactory = null;
 	
-	/*
-	private static IlrJ2SESessionFactory GetRuleSessionFactory() {
-		if (ruleSessionFactory == null) {
-			ruleSessionFactory = new IlrJ2SESessionFactory();
-		}
-		return ruleSessionFactory;
-	}
-	*/
 
 	private static IlrJ2SESessionFactory GetRuleSessionFactory() {
 		IlrSessionFactoryConfig factoryConfig = IlrJ2SESessionFactory.createDefaultConfig();
