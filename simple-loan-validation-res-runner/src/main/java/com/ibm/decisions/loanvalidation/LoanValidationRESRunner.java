@@ -27,6 +27,9 @@ import ilog.rules.res.session.IlrJ2SESessionFactory;
 import ilog.rules.res.session.IlrSessionRequest;
 import ilog.rules.res.session.IlrSessionResponse;
 import ilog.rules.res.session.IlrStatelessSession;
+import ilog.rules.res.session.config.IlrPersistenceType;
+import ilog.rules.res.session.config.IlrSessionFactoryConfig;
+import ilog.rules.res.session.config.IlrXUConfig;
 import java.util.Map;
 
 import loan.Borrower;
@@ -36,11 +39,22 @@ public class LoanValidationRESRunner {
 
 	private static IlrJ2SESessionFactory ruleSessionFactory = null;
 	
+	/*
 	private static IlrJ2SESessionFactory GetRuleSessionFactory() {
 		if (ruleSessionFactory == null) {
 			ruleSessionFactory = new IlrJ2SESessionFactory();
 		}
 		return ruleSessionFactory;
+	}
+	*/
+
+	private static IlrJ2SESessionFactory GetRuleSessionFactory() {
+		IlrSessionFactoryConfig factoryConfig = IlrJ2SESessionFactory.createDefaultConfig();
+		IlrXUConfig xuConfig = factoryConfig.getXUConfig();
+		xuConfig.setLogAutoFlushEnabled(true);
+		xuConfig.getPersistenceConfig().setPersistenceType(IlrPersistenceType.MEMORY);
+		xuConfig.getManagedXOMPersistenceConfig().setPersistenceType(IlrPersistenceType.MEMORY);
+		return new IlrJ2SESessionFactory(factoryConfig);
 	}
 	
 	public static void main(String[] args) {
