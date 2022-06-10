@@ -5,8 +5,9 @@ The ruleapp archive is packaged within the calling Java application. This patter
 
 This project shows how to execute rules packaged in a ruleapp archive in a standalone Java standard application.
 While the project leverages the ODM RES RuleSession API the ruleapp archive is embedded in the app jar and does not require any access to a RES DB.
+The RuleSession API supports multiple concurrent engines and rulesets for multi-threaded execution.
 
-![Flow](docs/images/decision_automation_in_map_reduce.png "Architecture")
+This API allows to set the persistence though 2 ways: a ra.xml descriptor file detected in the classpath, or Java API. The code shows the solution based on the descriptor.
 
 ## Pre requisites
 You need an IBM ODM 892 or higher installation to build the application. Root of your ODM installation is referred as <INSTALLDIR> in the instructions below. Maven files will look for the ODM jars under <INSTALLDIR>/executionserver/libs directory.
