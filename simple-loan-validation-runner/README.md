@@ -1,4 +1,4 @@
-# Simple loan validation in embedded Java
+# Simple loan validation in an embedded Java application
 This folder contains the source code to execute the ODM loan validation sample in an embedded Java application.
 
 ![Flow](docs/images/decision_automation_in_map_reduce.png "Architecture")
