@@ -41,5 +41,5 @@ java -cp target/loanvalidationresrunner-1.0-SNAPSHOT-withodmrt.jar com.ibm.decis
 
 Automate loan validation on a JSON applications dataset to produce a JSON decision set.
 ```console
-java -cp target/simpleloanvalidationrunner-1.0-SNAPSHOT-withODM.jar com.ibm.decisions.loanvalidation.LoanValidationRESRunner --input ../data/loanvalidation/1K/loanvalidation-requests-1K.json --output ../data/loanvalidation/1K/loanvalidation-decisions-1K.json --master local[8]
+java -cp target/loanvalidationresrunner-1.0-SNAPSHOT-withodmrt.jar com.ibm.decisions.loanvalidation.LoanValidationRESRunner --input ../data/loanvalidation/1K/loanvalidation-requests-1K.json --output ../data/loanvalidation/1K/loanvalidation-decisions-1K.json --master local[8]
 ```
