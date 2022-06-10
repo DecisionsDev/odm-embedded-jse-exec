@@ -44,13 +44,12 @@ mvn clean install -Dodm.install=/Users/johndoe/IBM/ODM8105 -Dodm.version=8.10.5.
 
 ## Run
 
-Automate loan validation on a CSV applications dataset to produce a CSV decision set.
+Approve a loan application with busines rules
 ```console
 java -cp target/loanvalidationresrunner-1.0-SNAPSHOT-withodmrt.jar com.ibm.decisions.loanvalidation.LoanValidationRESRunner
 ```
-When triggered the application runs a loan application as follows: 
+You should see a trace as follows: 
 ```console
-johndoe@macbook-pro:~/Projects/odm-embedded-jse-exec/simple-loan-validation-res-runner$ java -cp target/loanvalidationresrunner-1.0-SNAPSHOT-withodmrt.jar com.ibm.decisions.loanvalidation.LoanValidationRESRunner
 Jun 10, 2022 4:19:58 PM com.ibm.rules.res.logging.internal.RESLogger log
 INFO: Found default settings in file : META-INF/default_ra.xml.
 Jun 10, 2022 4:19:58 PM com.ibm.rules.res.xu.log.internal.LogHandler write
