@@ -16,7 +16,7 @@ Open an terminal where your have cloned this repository.
 cd odm-embedded-jse-exec/simple-loan-validation-runner
 ```
 ## Build
-For ODM 8.10.X releases
+For ODM 8.11.X and 8.10.X releases
 ```console
 mvn clean install -Dodm.install=<INSTALLDIR> -Dodm.version=<VERSION>
 ```
