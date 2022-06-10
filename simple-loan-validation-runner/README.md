@@ -27,19 +27,14 @@ mvn clean install -f pom-8.9.xml -Dodm.install=<INSTALLDIR>
 INSTALLDIR is the ODM 892 or upper version installation directory.
 VERSION is the version of ODM by example 8.10.3.0. This number has to match with the jar names.
 
-## Run locally
+## Run
 
 Automate loan validation on a CSV applications dataset to produce a CSV decision set.
 ```console
-java -cp target/simpleloanvalidationsparkrunner-1.0-SNAPSHOT-withspark.jar com.ibm.decisions.spark.loanvalidation.LoanValidationSparkRunner --input ../data/loanvalidation/1K/loanvalidation-requests-1K.csv --output ../data/loanvalidation/1K/loanvalidation-decisions-1K.csv --master local[8]
+java -cp target/simpleloanvalidationrunner-1.0-SNAPSHOT-withODM.jar com.ibm.decisions.spark.loanvalidation.LoanValidationRunner --input ../data/loanvalidation/1K/loanvalidation-requests-1K.csv --output ../data/loanvalidation/1K/loanvalidation-decisions-1K.csv
 ```
 
 Automate loan validation on a JSON applications dataset to produce a JSON decision set.
 ```console
-java -cp target/simpleloanvalidationsparkrunner-1.0-SNAPSHOT-withspark.jar com.ibm.decisions.spark.loanvalidation.LoanValidationSparkRunner --input ../data/loanvalidation/1K/loanvalidation-requests-1K.json --output ../data/loanvalidation/1K/loanvalidation-decisions-1K.json --master local[8]
-```
-
-Automate loan validation on a JSON applications dataset to produce a JSON decision set and to display a Rule coverage.
-```console
-java -cp target/simpleloanvalidationsparkrunner-1.0-SNAPSHOT-withspark.jar com.ibm.decisions.spark.loanvalidation.LoanValidationSparkRunner --input ../data/loanvalidation/1K/loanvalidation-requests-1K.json --output ../data/loanvalidation/1K/loanvalidation-decisions-1K.json --master local[8] --rulecoverage
+java -cp target/simpleloanvalidationrunner-1.0-SNAPSHOT-withODM.jar com.ibm.decisions.spark.loanvalidation.LoanValidationRunner --input ../data/loanvalidation/1K/loanvalidation-requests-1K.json --output ../data/loanvalidation/1K/loanvalidation-decisions-1K.json --master local[8]
 ```
