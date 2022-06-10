@@ -8,8 +8,8 @@ While the project leverages the ODM RES RuleSession API the ruleapp archive is e
 The RuleSession API supports multiple concurrent engines and rulesets for multi-threaded execution.
 
 This API allows to set the persistence though 2 ways: 
-- a ra.xml descriptor file detected in the classpath, 
-- or Java API. 
+- a ra.xml descriptor file detected in the classpath or, 
+- Java API. 
 
 The code shows the solution based on the Java api to set a memory persistence. With this memory persistence configuration the ruleapp asked for execution is searched in the classpath once and kept in memory for all executions. 
 
