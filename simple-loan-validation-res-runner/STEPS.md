@@ -2,14 +2,14 @@
 
 ![Concept of operations](ODM-embedded-jse-exec.jpg "Concept of operations")
 
-## Step 1 - Generate a ruleapp from your project
-### Step 1.1 - From Rule Designer
+## Step 1 - Generate a ruleapp archive from your decision service project
+### Step 1.1 - From ODM Rule Designer
 In your decision service project generate the ruleapp archive.
 
-### Step 1.2 - From Decision Center
+### Step 1.2 - From ODM Decision Center
 Alternatively you can generate the ruleapp archive for your decision service project in Decision Center.
 
-At the end of this step you have obtained a ruleapp archive in your file system
+At the end of this step you have obtained a ruleapp archive downloaded on your file system
 
 ## Step 2 - Create a Java application to execute the decision service
 
@@ -26,4 +26,4 @@ Add the ruleapp archive jar to the Java application classpath.
 javac commonly through a maven command
 
 ### Step 2.5 - Run
-java
+Launch our Java application. It executes the business rules as modeled in Rul Designer and Decision Center compiled and fully packaged within your application. No need of the RES DB, HTDS or other ODM parts. You are now ready to execute at scale and maximum speed your business rules in Java. Et voila. 
