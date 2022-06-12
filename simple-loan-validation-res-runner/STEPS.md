@@ -1,7 +1,7 @@
 # How to promote a ruleapp archive for embedded execution with ODM
 
 - [Concept of operations](ODM-embedded-jse-exec.jpg)
-- 
+
 ## Step 1 - Generate a ruleapp from your project
 ### Step 1.1 - From Rule Designer
 In your decision service project generate the ruleapp archive.
