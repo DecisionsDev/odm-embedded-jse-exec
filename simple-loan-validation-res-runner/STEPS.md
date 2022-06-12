@@ -1,6 +1,6 @@
 # How to promote a ruleapp archive for embedded execution with ODM
 
-- ![Concept of operations](ODM-embedded-jse-exec.jpg "Concept of operations")
+![Concept of operations](ODM-embedded-jse-exec.jpg "Concept of operations")
 
 ## Step 1 - Generate a ruleapp from your project
 ### Step 1.1 - From Rule Designer
