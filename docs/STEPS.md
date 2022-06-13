@@ -110,7 +110,7 @@ public IlrSessionResponse execute(Borrower borrower, LoanRequest loan) {
 		return null;
 	}
 ```
-An example of Maven pom file is available at [../simple-loan-validation-res-runner/pom.xml](pom.xml)
+An complete source code is available at [../simple-loan-validation-res-runner/src/main/java/com/ibm/decisions/loanvalidation/LoanValidationRESRunner.java](../simple-loan-validation-res-runnersrc/main/java/com/ibm/decisions/loanvalidation/LoanValidationRESRunner.java)
 
 ### Step 2.4 - Package the ruleapp archive in the Java application jar
 Add the ruleapp archive jar to the Java application classpath.
