@@ -27,16 +27,16 @@ At the end of this step you have obtained a ruleapp archive downloaded on your f
 
 ### Step 2.1 - Package the ODM execution jars
 Add theses librairies to load and execute a decision service compiled as a ruleapp archive:
-- ${odm.install}/executionserver/lib/jrules-res-${odm.version}-execution.jar
-- ${odm.install}/executionserver/lib/jrules-engine-${odm.version}.jar
-- ${odm.install}/executionserver/lib/j2ee_connector-1_5-fr.jar
+* ${odm.install}/executionserver/lib/jrules-res-${odm.version}-execution.jar
+* ${odm.install}/executionserver/lib/jrules-engine-${odm.version}.jar
+* ${odm.install}/executionserver/lib/j2ee_connector-1_5-fr.jar
 
 ### Step 2.2 - Package the executable object model jars
 Add the eXecutable Object Model library to the classpath of the Java application. Add associated third party jars if needed.
 
 ${basedir}/yourxom.jar
 
-An example of Maven pom file is available at [../simple-loan-validation-res-runner/pom.xml](../simple-loan-validation-res-runner/pom.xml)
+An example of Maven pom file is available at [../simple-loan-validation-res-runner/pom.xml](pom.xml)
 
 ### Step 2.3 - Write a decision service runner
 The code snipplet has a generic base. It just varie s depending on the signature of the decision service, the level of trace that your request, and potentially the configuration of the embedded Rule Execution Server rulesession factory.
