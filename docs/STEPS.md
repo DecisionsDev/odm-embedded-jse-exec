@@ -1,4 +1,4 @@
-# How to promote a ruleapp archive for embedded execution with ODM
+# How to promote a decision service project for embedded execution with ODM
 
 ![Concept of operations](ODM-embedded-jse-exec.jpg "Concept of operations")
 
