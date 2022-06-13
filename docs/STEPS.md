@@ -116,7 +116,7 @@ An complete source code is available in [LoanValidationRESRunner.java](../simple
 Add the ruleapp archive jar to the Java application classpath, as a regular library.
 
 ### Step 2.5 - Compile
-javac commonly through a maven command
+javac commonly through a maven command.
 An example of Maven pom file is available at [../simple-loan-validation-res-runner/pom.xml](pom.xml)
 
 ### Step 2.6 - Run
