@@ -41,8 +41,22 @@ An example of Maven pom file is available at [../simple-loan-validation-res-runn
 ### Step 2.3 - Write a decision service runner
 The code snipplet has a generic base. It just varies depending on the signature of the decision service operation, the level of trace that your request, and optionaly the configuration of the embedded Rule Execution Server RuleSession factory.
 
-```console
+First add ODM includes.
 
+```console
+import ilog.rules.res.model.IlrPath;
+import ilog.rules.res.session.IlrJ2SESessionFactory;
+import ilog.rules.res.session.IlrSessionRequest;
+import ilog.rules.res.session.IlrSessionResponse;
+import ilog.rules.res.session.IlrStatelessSession;
+import ilog.rules.res.session.config.IlrPersistenceType;
+import ilog.rules.res.session.config.IlrSessionFactoryConfig;
+import ilog.rules.res.session.config.IlrXUConfig;
+```
+
+Second create a method to initiate an embedded Rule Execution Server with an in memory persistence. In this mode the rule execution will search ruleapps in ithe classpath of the application.
+
+```console
 private static IlrJ2SESessionFactory GetRuleSessionFactory() {
 		IlrSessionFactoryConfig factoryConfig = IlrJ2SESessionFactory.createDefaultConfig();
 		IlrXUConfig xuConfig = factoryConfig.getXUConfig();
@@ -51,7 +65,15 @@ private static IlrJ2SESessionFactory GetRuleSessionFactory() {
 		xuConfig.getManagedXOMPersistenceConfig().setPersistenceType(IlrPersistenceType.MEMORY);
 		return new IlrJ2SESessionFactory(factoryConfig);
 	}
-  
+```
+
+Third a method to automate a rule based decision
+- the specified rulesetPath matches with the ruleapp/ruleset path of the ruleapp archive
+- the trace configuration is tunable depending on your needs
+- put all input parameters in the map for the execution
+- retrieive the output parameters and the trace from the response
+
+```console
 public IlrSessionResponse execute(Borrower borrower, LoanRequest loan) {
 		try {
 
