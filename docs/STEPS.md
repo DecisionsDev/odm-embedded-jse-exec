@@ -71,7 +71,7 @@ Third a method to automate a rule based decision
 - the specified rulesetPath matches with the ruleapp/ruleset path of the ruleapp archive
 - the trace configuration is tunable depending on your needs
 - put all input parameters in the map for the execution
-- retrieive the output parameters and the trace from the response
+- retrieve the output parameters and the trace from the response
 
 ```console
 public IlrSessionResponse execute(Borrower borrower, LoanRequest loan) {
