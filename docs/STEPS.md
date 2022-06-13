@@ -26,14 +26,13 @@ At the end of this step you have obtained a ruleapp archive downloaded on your f
 ## Step 2 - Create a Java application to execute the decision service
 
 ### Step 2.1 - Package the ODM execution jars
-Add theses librairies to load and execute a decision service compiled as a ruleapp archive.
-
+Add theses librairies to load and execute a decision service compiled as a ruleapp archive:
 - ${odm.install}/executionserver/lib/jrules-res-${odm.version}-execution.jar
 - ${odm.install}/executionserver/lib/jrules-engine-${odm.version}.jar
 - ${odm.install}/executionserver/lib/j2ee_connector-1_5-fr.jar
 
-### Step 2.2 - Package the ODM execution jars
-Add the eXecutable Object Model library to the classpath of the Java application
+### Step 2.2 - Package the executable object model jars
+Add the eXecutable Object Model library to the classpath of the Java application. Add associated third party jars if needed.
 
 ${basedir}/yourxom.jar
 
