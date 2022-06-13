@@ -6,6 +6,12 @@
 ### Step 1.1 - From ODM Rule Designer
 In your decision service project generate the ruleapp archive.
 
+![Deploy a RuleApp](ODM-RuleDesigner-1.0.png "Concept of operations")
+
+![Deploy a RuleApp](ODM-RuleDesigner-1.1.png "Concept of operations")
+
+![Deploy a RuleApp](ODM-RuleDesigner-1.2.png "Concept of operations")
+
 ### Step 1.2 - From ODM Decision Center
 Alternatively you can generate the ruleapp archive for your decision service project in Decision Center.
 
