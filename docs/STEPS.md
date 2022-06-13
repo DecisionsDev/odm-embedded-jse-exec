@@ -6,11 +6,17 @@
 ### Step 1.1 - From ODM Rule Designer
 In your decision service project generate the ruleapp archive.
 
+Select your decision service project in the explorer. Right click and select the Rule execution Server > Deploy... item.
+
 ![Deploy a RuleApp](ODM-RuleDesigner-1.0.png "Concept of operations")
+
+Now select the decoion service operation for which you want to generate the executable RuleApp archive, and where you choose to write it.
 
 ![Deploy a RuleApp](ODM-RuleDesigner-1.1.png "Concept of operations")
 
 ![Deploy a RuleApp](ODM-RuleDesigner-1.2.png "Concept of operations")
+
+Congratulations. Your RuleApp archive has been written. In this example under mydeployment.jar name that can be changed.
 
 ### Step 1.2 - From ODM Decision Center
 Alternatively you can generate the ruleapp archive for your decision service project in Decision Center.
