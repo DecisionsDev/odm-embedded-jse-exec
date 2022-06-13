@@ -39,7 +39,56 @@ Add the eXecutable Object Model library to the classpath of the Java application
 An example of Maven pom file is available at [../simple-loan-validation-res-runner/pom.xml](pom.xml)
 
 ### Step 2.3 - Write a decision service runner
-The code snipplet has a generic base. It just varie s depending on the signature of the decision service, the level of trace that your request, and potentially the configuration of the embedded Rule Execution Server rulesession factory.
+The code snipplet has a generic base. It just varies depending on the signature of the decision service operation, the level of trace that your request, and optionaly the configuration of the embedded Rule Execution Server RuleSession factory.
+
+```console
+
+private static IlrJ2SESessionFactory GetRuleSessionFactory() {
+		IlrSessionFactoryConfig factoryConfig = IlrJ2SESessionFactory.createDefaultConfig();
+		IlrXUConfig xuConfig = factoryConfig.getXUConfig();
+		xuConfig.setLogAutoFlushEnabled(true);
+		xuConfig.getPersistenceConfig().setPersistenceType(IlrPersistenceType.MEMORY);
+		xuConfig.getManagedXOMPersistenceConfig().setPersistenceType(IlrPersistenceType.MEMORY);
+		return new IlrJ2SESessionFactory(factoryConfig);
+	}
+  
+public IlrSessionResponse execute(Borrower borrower, LoanRequest loan) {
+		try {
+
+			IlrJ2SESessionFactory sessionFactory =  GetRuleSessionFactory();
+
+			// Creating the decision request
+			IlrSessionRequest sessionRequest = sessionFactory.createRequest();
+			String rulesetPath = "/loanvalidation/loan_validation_with_score_and_grade";
+			sessionRequest.setRulesetPath(IlrPath.parsePath(rulesetPath));
+
+			sessionRequest.setTraceEnabled(true);
+			//sessionRequest.getTraceFilter().setInfoAllFilters(true);
+			sessionRequest.getTraceFilter().setInfoRules(true);
+			sessionRequest.getTraceFilter().setInfoRulesNotFired(true);
+			sessionRequest.getTraceFilter().setInfoTasks(true);
+			sessionRequest.getTraceFilter().setInfoTotalTasksNotExecuted(true);
+			sessionRequest.getTraceFilter().setInfoExecutionEvents(true);
+
+			Map<String, Object> inputParameters = sessionRequest
+					.getInputParameters();
+			inputParameters.put("loan", loan);
+			inputParameters.put("borrower", borrower);
+
+			// Creating the rule session
+			IlrStatelessSession session = sessionFactory
+					.createStatelessSession();
+
+			IlrSessionResponse response = session.execute(sessionRequest);
+			return response;
+
+		} catch (Exception exception) {
+			exception.printStackTrace(System.err);
+		}
+		return null;
+	}
+```
+An example of Maven pom file is available at [../simple-loan-validation-res-runner/pom.xml](pom.xml)
 
 ### Step 2.4 - Package the ruleapp archive in the Java application jar
 Add the ruleapp archive jar to the Java application classpath.
