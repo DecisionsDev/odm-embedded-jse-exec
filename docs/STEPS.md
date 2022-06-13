@@ -6,7 +6,7 @@
 ### Step 1.1 - From ODM Rule Designer
 In your decision service project generate the ruleapp archive.
 
-Select your decision service project in the explorer. Right click and select the Rule execution Server > Deploy... item.
+Select your decision service project in the explorer. Right click and select the "Rule execution Server > Deploy..." item.
 
 ![Deploy a RuleApp](ODM-RuleDesigner-1.0.png "Concept of operations")
 
