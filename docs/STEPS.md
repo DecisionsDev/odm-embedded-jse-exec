@@ -113,10 +113,13 @@ public IlrSessionResponse execute(Borrower borrower, LoanRequest loan) {
 An complete source code is available in [LoanValidationRESRunner.java](../simple-loan-validation-res-runner/src/main/java/com/ibm/decisions/loanvalidation/LoanValidationRESRunner.java)
 
 ### Step 2.4 - Package the ruleapp archive in the Java application jar
-Add the ruleapp archive jar to the Java application classpath.
+Add the ruleapp archive jar to the Java application classpath, as a regular library.
 
 ### Step 2.5 - Compile
 javac commonly through a maven command
+An example of Maven pom file is available at [../simple-loan-validation-res-runner/pom.xml](pom.xml)
 
 ### Step 2.6 - Run
-Launch our Java application. It executes the business rules as modeled in Rul Designer and Decision Center compiled and fully packaged within your application. No need of the RES DB, HTDS or other ODM parts. You are now ready to execute at scale and maximum speed your business rules in Java. Et voila. 
+Launch our Java application. It executes the business rules as modeled in Rule Designer and Decision Center compiled and fully packaged within your application. No need of the RES DB, HTDS or other ODM parts. You are now ready to execute at scale and maximum speed your business rules in Java. Et voila.
+
+A full code example is available at simple-loan-validation-res-runner](../simple-loan-validation-res-runner)
