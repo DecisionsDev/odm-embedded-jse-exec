@@ -7,6 +7,6 @@ IBM ODM proposes several options to execute business rules in a Java application
 
 For a local Java execution the preferred API is the ODM RuleSession one to retrieve the ruleapp archive from a relational database, a file system or the class path.
 ## How to promote a ruleapp for embedded execution
-- [steps](simple-loan-validation-res-runner/STEPS.md)
+- [steps](docs/STEPS.md)
 ## Embedded Rule execution in a self contained Java application
 - [simple-loan-validation-res-runner](simple-loan-validation-res-runner/README.md): embedded rule execution in a standalone Java application
