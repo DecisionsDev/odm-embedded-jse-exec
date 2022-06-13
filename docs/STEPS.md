@@ -36,7 +36,7 @@ Add the eXecutable Object Model library to the classpath of the Java application
 
 ${basedir}/yourxom.jar
 
-An example of Maven pom file is available at [simple-loan-validation-res-runner/pom.xml](pom.xml)
+An example of Maven pom file is available at [../simple-loan-validation-res-runner/pom.xml](pom.xml)
 
 ### Step 2.3 - Write a decision service runner
 The code snipplet has a generic base. It just varie s depending on the signature of the decision service, the level of trace that your request, and potentially the configuration of the embedded Rule Execution Server rulesession factory.
