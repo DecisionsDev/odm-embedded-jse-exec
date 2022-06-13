@@ -120,6 +120,8 @@ javac commonly through a maven command.
 An example of Maven pom file is available at [../simple-loan-validation-res-runner/pom.xml](pom.xml)
 
 ### Step 2.6 - Run
-Launch our Java application. It executes the business rules as modeled in Rule Designer and Decision Center compiled and fully packaged within your application. No need of the RES DB, HTDS or other ODM parts. You are now ready to execute at scale and maximum speed your business rules in Java. Et voila.
+Launch our Java application. It executes the business rules as modeled in Rule Designer and Decision Center compiled and fully packaged within your application. No need of the RES DB, HTDS or other ODM parts. 
+
+You are now ready to execute at scale and maximum speed your business rules in Java. Et voila.
 
 A full code example is available at [../simple-loan-validation-res-runner](../simple-loan-validation-res-runner)
