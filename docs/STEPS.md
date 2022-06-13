@@ -10,7 +10,7 @@ Select your decision service project in the explorer. Right click and select the
 
 ![Deploy a RuleApp](ODM-RuleDesigner-1.0.png "Concept of operations")
 
-Now select the decoion service operation for which you want to generate the executable RuleApp archive, and where you choose to write it.
+Now select the decision service operation for which you want to generate the executable RuleApp archive, and where you choose to write it.
 
 ![Deploy a RuleApp](ODM-RuleDesigner-1.1.png "Concept of operations")
 
